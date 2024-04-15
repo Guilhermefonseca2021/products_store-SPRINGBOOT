@@ -3,12 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
+	<!-- tudo no .pom.xml sao configuracoes de build para o maven gerenciar dependencias para o springboot rodar. -->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.treinaweb</groupId>
+	<groupId>br.com.api</groupId>
 	<artifactId>e-caregiver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>e-caregiver</name>
@@ -18,19 +19,13 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
+		<!-- ja traz o apache tom cat q é um mini servidor para rodar. -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
+		<!-- traz a monitoracao de toda api sempre recarregando as mudancas que ouver. -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
