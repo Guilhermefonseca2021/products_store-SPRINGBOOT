@@ -2,13 +2,18 @@
 
 Criar uma API Restfull para controle de proutos
 
-Modelo:
+- [x] Modelo:
     - Produto: id, name, quantity, value, description.
 
-Repositorio:
+- [x] Repositorio:
     - Produto: obterTodos, obterPorId, adicionar, atualizar, deletar.
   
+- [x] Servico:
+    - Produtos: obterTodos, obterPorId, adicionar, atualizar, deletar.
+    - (usa o repositorio para determinar se vai ter regra de negocio ou nao.)
 
+- [x] Controller de produto:
+    - Produto: obterTodos, obterPorId, adicionar, atualizar, deletar.
 
 
 ## MVC
