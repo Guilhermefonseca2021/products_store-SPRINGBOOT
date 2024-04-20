@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 import br.com.api.model.Product;
+import br.com.api.model.exception.ResourceNotFoundException;
 
 // essa anotacao diz ao spring que este é um repositorio, dando poder de fazer injecao de dependencias e inversao de controles.
 @Repository
@@ -57,7 +58,8 @@ public class ProductRepository {
         // Encontrar produto na lista...
         Optional<Product> productFinded = getProductById(product.getId());
         if(productFinded.isEmpty()) {
-            throw new InputMismatchException("Product not found");
+            // throw new InputMismatchException("Product not found");
+            throw new ResourceNotFoundException("Product Not found");
         }
         // Tenho que remover produto antigo.
         delete(product.getId());

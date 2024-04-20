@@ -15,6 +15,8 @@ Criar uma API Restfull para controle de proutos
 - [x] Controller de produto:
     - Produto: obterTodos, obterPorId, adicionar, atualizar, deletar.
 
+- [x] Mensagem de error:
+  - Exception personalizada, objeto de error e um ouvinte para ativar em qual evento houver.
 
 ## MVC
 
