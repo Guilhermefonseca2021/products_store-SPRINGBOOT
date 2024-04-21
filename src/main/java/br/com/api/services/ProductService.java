@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.api.model.Product;
-import br.com.api.repository.ProductRepository;
+import br.com.api.repository.ProductRepository_old;
 
 // notacao que indica uma classe de servico, aqui injetamos a dependencia para o spring que devolve um controle, atraves da inversao de controle.(aqui deixo o spring tomar conta)
 @Service
 public class ProductService {
     // aqui eu digo para o spring que estou invertendo o controller(aqui eu tomo conta) tenho todos metodos do ProductRepository.
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepository_old productRepository;
     /**
      * Metodo que retorna todos produtos da lista
      * @return lista de produtos

@@ -1,6 +1,14 @@
 package br.com.api.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity  // esssa anotacao vinda do hibernate(spring-data JPA) ja faz todo objeto ser uma tabela no DB.
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO) // criando a tipagem do tipo auto para o banco de dados.
     private Integer id;
     private String name;
     private Integer quantity;
